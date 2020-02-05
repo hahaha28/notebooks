@@ -1,6 +1,6 @@
 # Access media files from shared storage
 
-> 笔记整理自[官方文档](https://developer.android.com/training/data-storage/shared)
+> 笔记整理自[官方文档](https://developer.android.com/training/data-storage/shared/media)
 >
 > 2020/2/5
 
