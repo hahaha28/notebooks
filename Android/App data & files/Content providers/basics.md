@@ -297,6 +297,8 @@ rowsUpdated = contentResolver.update(
 
 > 这段代码将 locale 中含有 "en" 的值都改为 `null`
 
+
+
 ## 删除数据
 
 ---
@@ -331,5 +333,51 @@ rowsDeleted = contentResolver.delete(
 
 
 
+## 使用内容提供器的方式
 
+有三种方式：
+
+1. **批量访问**
+
+    使用 `ContentProviderOperation` 类和 `ContentResolver.applyBetch()`
+
+2. **异步访问**
+
+    在另外一个线程使用，可以使用 `CursorLoader` 
+
+    > `CursorLoader` 已被弃用，可以查看 [Loaders](https://developer.android.com/guide/components/loaders.html)
+
+3. **通过 `Intent` 访问**
+
+    虽然不能通过 `Intent` 直接访问提供器，但可以把 `Intent` 发给提供器的 App
+
+下面将介绍批量访问和通过 `Intent` 的方式
+
+### 1.批量访问（Betch access）
+
+当需要大量调用访问提供器的方法时，可以使用这种方式。
+
+> 感觉可能用不到
+>
+> 不做笔记了，有兴趣可以点 [这里](https://developer.android.com/guide/topics/providers/content-provider-basics#Batch)
+
+### 2.通过 Intent 访问
+
+使用 `Intent` 可以间接访问提供器，而且不需要申请提供器的访问权限。
+
+> 没看懂
+>
+> [再去看看](https://developer.android.com/guide/topics/providers/content-provider-basics#Intents)
+
+
+
+## Contract 类
+
+---
+
+Contract 类定义了一个提供器的内容 Uri、列名、`Intent action` 等。
+
+这个类由提供器的开发者定义，并供其他开发者使用。
+
+Android系统的提供器的 Contract 类都在 [android.provider](https://developer.android.com/reference/android/provider/package-summary.html) 包下。
 
