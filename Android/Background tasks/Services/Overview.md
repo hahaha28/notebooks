@@ -195,5 +195,110 @@ override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
 ### 继承Service
 
-使用 `IntentService` 非常的简单，但如果你想要在服务里执行多个线程，就只能自己继承 `Service` 
+使用 `IntentService` 非常的简单，但如果你想要在服务里执行多个线程，就只能自己继承 `Service` 。
 
+#### onStartCommand的返回值
+
+`onStartCommand()` 函数要返回一个整数，这个整数描述了，当服务被杀掉后，系统如何继续这个服务。这个返回值有以下几种情况：
+
+* **START_NOT_STICKY**
+
+    在`onStartCommand()` 函数后，如果服务被系统杀掉，不会重启服务，除非有 pedding intent 要处理。
+
+    这是最安全的服务，可以避免不必要的重启服务。适用于服务中的工作可以重启。
+
+* **START_STICKY**
+
+    在 `onStartCommand()` 函数后，如果服务被杀掉，系统会重启服务（表示怀疑）并重新调用 `onStartCommand()` 函数，并传给 `onStartCommand()` 一个值为 `null` 的 `Intent` 。
+
+* **START_REDELIVER_INTENT**
+
+    在 `onStartCommand()` 函数后，如果服务被杀掉，系统会重启服务（表示怀疑）并重新调用 `onStartCommand()` 函数，并传给 `onStartCommand()` 最后一个 `Intent` 。
+
+
+
+## 创建一个绑定的服务
+
+绑定的服务是指，其他组件通过调用 `bindService()` 创建的服务，这种服务一般情况下不允许使用 `startService()` 。
+
+一个服务可以与多个组件绑定。当没有组件与服务绑定时，系统会摧毁这个服务。
+
+与 `startService()` 创建的服务不同，你不需要自己去停止这个服务。
+
+**解绑**服务，使用 `unBind()` 。
+
+服务与其他组件通过 `IBinder` 来沟通。
+
+> 绑定服务的具体，在另一篇笔记介绍
+
+
+
+## 前台服务
+
+前台服务会显示一个不可被关闭的通知，前台服务的优先级很高，一般不会被系统杀掉。
+
+> 从 Android 9.0（API 28）开始，使用前台服务需要申请 `FOREGROUND_SERVICE` 权限，这是一个普通权限，不需要动态申请
+
+要让服务运行在前台，调用：
+
+```java
+public final void startForeground (int id,Notification notification)
+```
+
+id 用来唯一标识通知
+
+> 这个 id 不能是0，通知的优先级至少为 `PRIORITY_LOW`
+
+**撤下前台服务**：
+
+使用 `stopForeground()` 
+
+这个方法只会让服务不在前台运行，并没有停止服务。
+
+如果直接停止服务，前台的通知也会跟着消失。
+
+
+
+## 服务的生命周期
+
+服务的生命周期有两种情况，一种是通过 `startService()` 启动的服务，一种是通过 `bindService()` 启动的服务。但这两种并没有完全的分开，通过 `startService()` 启动的服务也可以被绑定，在这种情况下，`stopService()` 和 `stopSelf()` 并不会停止服务，而是要等到服务没有任何绑定。
+
+![img](https://github.com/hahaha28/photos/raw/master/notebooks/Android/service_lifecycle.png)
+
+```kotlin
+class ExampleService : Service() {
+    private var startMode: Int = 0             // indicates how to behave if the service is killed
+    private var binder: IBinder? = null        // interface for clients that bind
+    private var allowRebind: Boolean = false   // indicates whether onRebind should be used
+
+    override fun onCreate() {
+        // The service is being created
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // The service is starting, due to a call to startService()
+        return mStartMode
+    }
+
+    override fun onBind(intent: Intent): IBinder? {
+        // A client is binding to the service with bindService()
+        return mBinder
+    }
+
+    override fun onUnbind(intent: Intent): Boolean {
+        // All clients have unbound with unbindService()
+        return mAllowRebind
+    }
+
+    override fun onRebind(intent: Intent) {
+        // A client is binding to the service with bindService(),
+        // after onUnbind() has already been called
+    }
+
+    override fun onDestroy() {
+        // The service is no longer used and is being destroyed
+    }
+}
+```
+
+> 与 Activity 不同，服务的回调函数不需要调用父类的实现
