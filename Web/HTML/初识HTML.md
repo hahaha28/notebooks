@@ -1,12 +1,16 @@
 # 初识HTML
 
 - HTML 指的是超文本标记语言 (**H**yper **T**ext **M**arkup **L**anguage)是用来描述网页的一种语言。
-
 - HTML 不是一种编程语言，而是一种标记语言 (markup language)
-
 - 标记语言是一套标记标签 (markup tag)
 
-    
+## 文档
+
+[W3C](http://www.w3school.com.cn/)
+
+[MDN](https://developer.mozilla.org/zh-CN/)
+
+  
 
 ## HTML 骨架标签
 
