@@ -159,8 +159,6 @@ LocalBroadcastManager.sendBroadcast(Intent intent)
 
 
 
-
-
 ## 权限限制
 
 > 这部分内容有点偏，不做详细笔记，有兴趣去看[官方文档](https://developer.android.com/guide/components/broadcasts#restrict-broadcasts-permissions)

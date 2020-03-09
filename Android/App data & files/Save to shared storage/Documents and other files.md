@@ -10,8 +10,6 @@
 
 ## SAF 的用处
 
----
-
 1. 创建文件
 
     使用 `ACTION_CREATE_DOCUMENT` intent action 让用户将文件保存在指定位置
@@ -28,13 +26,11 @@
 
 ## 创建文件
 
----
-
 使用 `ACTION_CREATE_DOCUMENT` intent action 去调用系统 file picker，然后用户选择一个位置保存文件。
 
-> ```note
+> 
 > 这种做法不能覆盖已有的文件，如果新建的文件与目录下其他文件重名，那么系统会在文件名后加一个数字。例如confirmation.pdf如果重名了，系统会修改为confirmation(1).pdf
-> ```
+> 
 
 Intent 的配置参数：
 
@@ -123,8 +119,6 @@ fun openDirectory(pickerInitialUri: Uri) {
 
 
 ## 在调用完 file picker 之后
-
----
 
 在用户使用系统的 file picker 之后，App 可以在 `onActivityResult()` 得到一个 URI
 

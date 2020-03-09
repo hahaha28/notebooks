@@ -14,8 +14,6 @@
 
     这个位置的存储空间是有限的，不应该用来保存大文件。
 
-
-
 * **External storage directories**
 
     这个位置的文件能够被其他 app 访问，但是当 app 卸载时文件也会被删除。
@@ -25,8 +23,6 @@
 
 
 ## Access from internal storage
-
-----
 
 这个位置有两个文件夹，一个用来存储持久化文件，一个用来存储缓存。
 
@@ -127,8 +123,6 @@ context.deleteFile(fileName)
 
 ## Access from external storage
 
-----
-
 这个位置有两个文件夹，一个用来存储持久化文件，一个用来存储缓存。
 
 * 从 Android 4.4（API 19）开始，不需要申请权限
@@ -208,8 +202,6 @@ val primaryExternalStorage = externalStorageVolumes[0]
 
 
 ## Query free space
-
----
 
 > 当扩展知识，这玩意估计也用不着
 
