@@ -53,7 +53,7 @@ android{
 ### 在 Activity 中使用
 
 ```kotlin
-private lateinit val binding: ActivityMainBinding
+private lateinit var binding: ActivityMainBinding
 override fun onCreate(savedInstanceState:Bundle?){
     super.onCreate(savedInstanceState)
     // 填充布局，设置根布局

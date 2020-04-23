@@ -6,8 +6,6 @@
 
 ## 三种全屏模式
 
----
-
 Android 提供三种全屏模式：
 
 1. Lean Back
@@ -67,8 +65,6 @@ View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 
 
 ## 使用全屏模式
-
----
 
 无论使用哪种全屏模式，都要调用 `setSystemUiVisibility()` 并传入 flag
 
