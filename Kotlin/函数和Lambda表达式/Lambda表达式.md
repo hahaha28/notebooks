@@ -18,8 +18,6 @@ Lambda表达式的语法和局部函数很相似，但有如下区别
 * 函数体（Lambda表达式的执行体）放在 ` ->`  之后
 * 函数的最后一个表达式自动作为Lambda表达式的返回值，无须使用 `return` 关键字
 
-
-
 ## 调用Lambda表达式
 
 Lambda表达式的本质是功能更灵活的代码块，因此可以将Lambda表达式赋值给变量或直接调用
@@ -37,8 +35,6 @@ var result = {a:Int,b:Int ->
 println(result)		//3
 ~~~
 
-
-
 ## 省略形参类型
 
 如果Kotlin可以根据Lambda表达式上下文推断出形参类型，那么Lambda表达式就可以省略形参类型
@@ -52,8 +48,6 @@ var square:(Int)->Int = {n->
 
 由于square变量的类型已经指定，所以Kotlin可以推断出Lambda表达式的形参类型，所以可以省略
 
-
-
 ## 省略形参名
 
 如果只有一个形参，Lambda表达式可以省略形参名，那么 `->` 也不需要，并且使用 `it` 代表形参
@@ -63,8 +57,6 @@ var square:(Int)->Int = {n->
 var square:(Int)->Int{it*it}
 println(square(3))
 ~~~
-
-
 
 ## 调用Lambda表达式的约定
 
@@ -80,8 +72,6 @@ var array = Array<Int>(5){it+1}
 var list = listOf("java","Kotlin","Go")
 var rt = list.dropWhile{it.length>3}
 ~~~
-
-
 
 ## 个数可变的参数和Lambda表达式
 

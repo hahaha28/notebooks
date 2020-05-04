@@ -11,7 +11,7 @@
 
 这篇文章将基于已存在的内容提供器，教你如何使用 provider client object 去访问内容提供器。
 
-本文将介绍一下内容：
+本文将介绍以下内容：
 
 * 内容提供器如何工作
 * 从内容提供器获取数据的 API
@@ -21,8 +21,6 @@
 
 
 ## 概述
-
----
 
 内容提供器将数据以表的形式提供给其他应用，类似于关系型数据库的表。
 
@@ -40,7 +38,7 @@
 
 访问内容提供器需要使用 `ContentResolver` 对象作为与提供器通信的客户端。
 
-> 这个对象可以在应用的 `Context` 中获取到
+> 这个对象可以在应用的 Context 中获取到
 
 当调用 `ContentResolver` 对象中的方法时，对应的 `ContentProvider` 会调用同名的方法，`ContentResolver` 中提供了基本的 CRUD 方法。
 
@@ -115,13 +113,11 @@ val singleUri: Uri = ContentUris.withAppendedId(UserDictionary.Words.CONTENT_URI
 val uri: Uri = Uri.parse("content://user_dictionary/words")
 ```
 
-> `Uri` 和 `Uri.Builder` 类提供了许多方法用来从 `String` 构建 `Uri` 对象。`ContentUris` 类提供方法用来给 Uri 追加 id 。（来自官方的 note）
+> Uri 和 Uri.Builder 类提供了许多方法用来从 String  构建 Uri 对象。ContentUris 类提供方法用来给 Uri 追加 id 。（来自官方的 note）
 
 
 
 ## 从提供器获取数据
-
----
 
 这一小节介绍如何从内容提供器中获取数据，将使用用户字典提供器作为例子。
 
@@ -206,8 +202,6 @@ mCursor?.apply{
 
 ## 插入数据
 
----
-
 使用 `ContentResolver` 的 `insert()` 方法
 
 ```java
@@ -254,8 +248,6 @@ newUri = contentResolver.insert(
 
 ## 更新数据
 
----
-
 使用 `ContentResolver` 的 `update()` 方法
 
 ```java
@@ -301,8 +293,6 @@ rowsUpdated = contentResolver.update(
 
 ## 删除数据
 
----
-
 使用 `ContentResolver` 的 `delete()` 方法
 
 ```java
@@ -345,7 +335,7 @@ rowsDeleted = contentResolver.delete(
 
     在另外一个线程使用，可以使用 `CursorLoader` 
 
-    > `CursorLoader` 已被弃用，可以查看 [Loaders](https://developer.android.com/guide/components/loaders.html)
+    > CursorLoader 已被弃用，可以查看 [Loaders](https://developer.android.com/guide/components/loaders.html)
 
 3. **通过 `Intent` 访问**
 
@@ -372,8 +362,6 @@ rowsDeleted = contentResolver.delete(
 
 
 ## Contract 类
-
----
 
 Contract 类定义了一个提供器的内容 Uri、列名、`Intent action` 等。
 

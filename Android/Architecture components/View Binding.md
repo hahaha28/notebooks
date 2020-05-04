@@ -4,8 +4,6 @@
 >
 > 2020.3.5
 
-
-
 ## 配置
 
 **build.gradle**
@@ -33,8 +31,6 @@ android{
     tools:viewBindingIgnore = "true">
 </LinearLayout>
 ```
-
-
 
 ## 使用
 

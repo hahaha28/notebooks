@@ -6,8 +6,6 @@
 
 [查看总结的脑图](https://github.com/hahaha28/photos/raw/master/notebooks/Android/broadcast-mind.png)
 
-
-
 ## 概念
 
 * 广播是一种观察者模式
@@ -24,8 +22,8 @@
 * **Android 9（API 28）**
 
   从 Android 9 开始，`NETWORK_STATE_CHANGED_ACTION` 广播里不再包含用户的位置和个人信息。
-
-
+  
+  
 
 * **Android 8（API26)**
 
@@ -51,8 +49,6 @@
 
 1. 在上下文注册的（动态广播）
 2. 在清单文件注册的（静态广播）
-
-
 
 ### 上下文注册的接收器
 
