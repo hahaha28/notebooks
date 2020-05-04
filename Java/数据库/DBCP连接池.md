@@ -17,8 +17,6 @@ commons-logging		// 这个是旧版不用的，要注意
 mysql-connector-java	//驱动是必须的
 ```
 
-
-
 ## 连接
 
 ```kotlin

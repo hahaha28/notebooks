@@ -101,7 +101,7 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
 效果如下图，代码参考 [这个笔记](../Sample/ActionMode.md)
 
-<img src="https://github.com/hahaha28/photos/raw/master/notebooks/Android/action_mode.gif" alt="img" style="zoom: 25%;" />
+<img src="http://img.inaction.fun/static/40305.gif" alt="img" style="zoom: 25%;" />
 
 > 上下文操作模式有两种，一种是给单个 View 用的，一种是给 ListView 用的，但是给 ListView 用的那种只适用于 AbsListView 的子类，而 RecyclerView 是继承自 ViewGroup 的，所以不能用。但是用第一种方法也实现了上图所示的效果，笔记也不记录第二种方法。
 

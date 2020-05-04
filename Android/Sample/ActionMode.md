@@ -4,7 +4,7 @@
 
 效果如下图
 
-<img src="https://github.com/hahaha28/photos/raw/master/notebooks/Android/action_mode.gif" alt="img" style="zoom: 25%;" />
+<img src="http://img.inaction.fun/static/40305.gif" alt="img" style="zoom: 25%;" />
 
 用到了菜单中的 *上下文模式* 
 

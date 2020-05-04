@@ -147,4 +147,4 @@ class MainActivity : Activity(){
 
 下图示意了，一个服务，既被 `startService()` ，又被 `bindService()` 的生命周期
 
-![img](https://github.com/hahaha28/photos/raw/master/notebooks/Android/service_binding_tree_lifecycle.png)
+![img](http://img.inaction.fun/static/44389.png)

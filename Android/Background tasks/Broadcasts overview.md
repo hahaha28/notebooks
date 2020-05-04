@@ -4,7 +4,7 @@
 >
 > 2020.3.3
 
-[查看总结的脑图](https://github.com/hahaha28/photos/raw/master/notebooks/Android/broadcast-mind.png)
+[查看总结的脑图](http://img.inaction.fun/static/48605.png)
 
 ## 概念
 

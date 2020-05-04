@@ -2,7 +2,7 @@
 
 1. 建立一个 `lib` 文件夹，和 `src` 平级
 
-    ![img](https://github.com/hahaha28/photos/raw/master/notebooks/Java/Gradle的lib目录位置.png)
+    ![img](http://img.inaction.fun/static/36379.png)
 
 2. 打开 `project structure` 
 
@@ -10,7 +10,7 @@
     Moudles -> main -> Dependencies -> + -> jar or directories
     ```
 
-    ![img](https://github.com/hahaha28/photos/raw/master/notebooks/Java/Gradle添加依赖包.png)
+    ![img](http://img.inaction.fun/static/84142.png)
 
 3. 在 `build.gradle`
 

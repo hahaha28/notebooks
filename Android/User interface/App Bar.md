@@ -169,9 +169,9 @@ supportActionBar?.setHomeAsUpIndicator(R.drawable.xxx)
 
 ## Action View
 
-<img src="https://github.com/hahaha28/photos/raw/master/notebooks/Android/actionView1.jpg" alt="img" style="zoom:50%;" />
+<img src="http://img.inaction.fun/static/59716.jpg" alt="img" style="zoom:50%;" />
 
-<img src="https://github.com/hahaha28/photos/raw/master/notebooks/Android/actionView2.jpg" alt="img" style="zoom:50%;" />
+<img src="http://img.inaction.fun/static/27982.jpg" alt="img" style="zoom:50%;" />
 
 ### 什么是Action View?
 

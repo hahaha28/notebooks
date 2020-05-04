@@ -257,7 +257,7 @@ id 用来唯一标识通知
 
 服务的生命周期有两种情况，一种是通过 `startService()` 启动的服务，一种是通过 `bindService()` 启动的服务。但这两种并没有完全的分开，通过 `startService()` 启动的服务也可以被绑定，在这种情况下，`stopService()` 和 `stopSelf()` 并不会停止服务，而是要等到服务没有任何绑定。
 
-![img](https://github.com/hahaha28/photos/raw/master/notebooks/Android/service_lifecycle.png)
+![img](http://img.inaction.fun/static/69013.png)
 
 ```kotlin
 class ExampleService : Service() {

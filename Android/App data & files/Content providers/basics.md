@@ -32,7 +32,7 @@
 * 向服务器同步应用数据，通过使用 `AbstractThreadedSyncAdapter`
 * 在 UI 中加载数据，使用 `CursorLoader`
 
-![内容提供器和其他组件之间的关系图](https://github.com/hahaha28/photos/raw/master/notebooks/Android/content-provider-tech-stack.png)
+![内容提供器和其他组件之间的关系图](http://img.inaction.fun/static/50545.png)
 
 ### 1.访问提供器
 
@@ -44,7 +44,7 @@
 
 在 UI 中访问 `ContentProvider` 的一个通常模式是，使用 `CursorLoader` 在后台执行异步查询。在 `Activity` 或 `Fragment` 中使用 `CursorLoader` 执行查询，会顺序使用 `ContentResolver` 访问 `ContentProvider` 。这使得主线程不会被查询阻塞。
 
-![模式示意图](https://github.com/hahaha28/photos/raw/master/notebooks/Android/content-provider-interaction.png)
+![模式示意图](http://img.inaction.fun/static/74018.png)
 
 ### 2.示例：访问用户字典
 

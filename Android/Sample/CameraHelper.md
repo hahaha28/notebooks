@@ -2,15 +2,11 @@
 
 [github地址](https://github.com/hahaha28/CameraHelper)
 
-
-
 ## 主要思路
 
 将操作封装在一个无界面的`Fragment`中
 
 `Provider`也在库中定义
-
-
 
 ## 坑
 

@@ -8,7 +8,7 @@
 
 **Activity 的所有生命周期函数在重写时都必须调用父类**
 
-![生命周期图](https://github.com/hahaha28/photos/raw/master/notebooks/Android/activity_lifecycle.png)
+![生命周期图](http://img.inaction.fun/static/86690.png)
 
 ## 生命周期变化
 
