@@ -4,7 +4,7 @@
 >
 > 2020-3-8
 
-![img](https://developer.android.com/images/fragment_lifecycle.png)
+![img](http://img.inaction.fun/static/10963.png)
 
 
 

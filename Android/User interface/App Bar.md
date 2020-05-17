@@ -6,8 +6,6 @@
 
 因为原来的`ActionBar`在各个安卓版本上表现不一致，而`ToolBar`只要用`support`库就都一样
 
-
-
 ## 添加Toolbar
 
 **遵循以下步骤：**
