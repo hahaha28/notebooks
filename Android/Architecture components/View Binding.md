@@ -82,6 +82,7 @@ override fun onCreateView(
 
 override fun onDestroyView() {
     _binding = null
+    super.onDestroyView()
 }
 ```
 

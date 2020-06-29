@@ -91,8 +91,6 @@ fun openFile(pickerInitialUri: uri) {
 
 ## 获取指定文件夹的权限
 
----
-
 > 在 Android 5.0（API 21）及以上才能使用
 
 使用 `ACTION_OPEN_DOCUMENT_TREE` intent action 去调用 system picker，然后用户选择一个位置，App 便会获得这个位置所有文件的访问权限（包括子文件夹）。
