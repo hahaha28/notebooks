@@ -17,10 +17,12 @@
 * **External storage directories**
 
     这个位置的文件能够被其他 app 访问，但是当 app 卸载时文件也会被删除。
+    
+    从 Android 10（API 29）开始，启用了范围存储的应用，不能再访问其他应用的此处文件。
+    
+    从 Android 4.4（API 19）开始，不需要权限。
 
 **当 App 卸载时，所有 app-specific 存储都会被删除**
-
-
 
 ## Access from internal storage
 
@@ -138,7 +140,7 @@ context.deleteFile(fileName)
 调用这个方法：
 
 ```kotlin
-context.getExternalDir()	// 返回 File 对象
+context.getExternalFilesDir()	// 返回 File 对象
 ```
 
 > 可以传入 null 值，获取到的是根目录

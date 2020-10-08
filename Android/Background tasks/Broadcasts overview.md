@@ -150,7 +150,8 @@ sendOrderBroadcast( Intent intent, String receiverPermission)
 本地广播只在 App 内部传播，更为高效。
 
 ```java
-LocalBroadcastManager.sendBroadcast(Intent intent)
+LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(this);
+localBroadcastManager.sendBroadcast(Intent intent)
 ```
 
 

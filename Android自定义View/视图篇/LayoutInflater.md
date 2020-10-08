@@ -6,15 +6,11 @@
 
   [三个案例带你看懂LayoutInflater中inflate方法两个参数和三个参数的区别](https://blog.csdn.net/u012702547/article/details/52628453#commentBox)
 
-
-
 ## 概述
 
 `LayoutInfalter`主要用来加载布局，`inflate()`的作用就是把一个用`xml`定义的布局文件加载出来。
 
 注意与`findViewById()`的区别，`inflater()`是加载一个布局文件，`findViewById()`是在一个已加载的视图结构中查找一个`View`。
-
-
 
 ## 获取实例
 
@@ -30,8 +26,6 @@ val layoutInflater = context.
 ```
 
 第一种方法其实是第二种方法的简写
-
-
 
 ## 加载布局
 

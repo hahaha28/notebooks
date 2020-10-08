@@ -196,4 +196,3 @@ val listView:View? = activity?.findViewById(R.id.list)
 上下文菜单也可以设置。
 
 > Fragment 的 Activity 会先于 Fragment 接收到菜单点击事件的回调，如果 Activity 没有处理，才会传递到 Fragment。
-

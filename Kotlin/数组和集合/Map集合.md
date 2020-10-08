@@ -2,8 +2,6 @@
 
 > 与 Java 不同的是，Kotlin 的 **Map** 集合也被分为可变的和不可变的
 
-
-
 ## 创建 Map 集合
 
 实际上 Kotlin 并没有实现任何 **Map** 集合类，因此不推荐通过构造器创建 **Map** 集合
@@ -57,8 +55,6 @@ println(map)
 
 **Kotlin 需要使用 to 指定 key-value 对**
 
-
-
 ## 遍历 Map
 
 > Kotlin 的 Map 提供了 operator 修饰的 get（）方法，因此可以用 **[]**
@@ -97,8 +93,6 @@ map.forEach({
 })
 ~~~
 
-
-
 ## 添加
 
 > 除了 mapOf() ，其他函数返回的都是可变的 Map 集合
@@ -116,8 +110,6 @@ map.forEach({
     
 
 * **使用 [] 运算符来放入 key-value 对**
-
-    
 
 ## 删除
 

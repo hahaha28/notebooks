@@ -2,6 +2,8 @@
 
 > 转载自[这里](https://github.com/LRH1993/android_interview/blob/master/computer-networks/http.md)
 
+![img](http://img.inaction.fun/static/42800.jpeg)
+
 ## 一. HTTP 是什么
 
 通俗来讲，他就是计算机通过网络进行通信的规则，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP/IP协议传输数据。目前任何终端（手机，笔记本电脑。。）之间进行任何一种通信都必须按照Http协议进行，否则无法连接。

@@ -99,7 +99,7 @@ content://user_dictionary/words/4
 
 * `words` 是 ***path***，代表了提供器中的哪一个表
 
-* `4` 是 ***_ID***值，它代表了表中 `_ID` 为4的那条数据
+* `4` 是 ***_ID*** 值，它代表了表中 `_ID` 为4的那条数据
 
 要给一个Uri 加上 _ID 值，官方建议：
 
@@ -121,7 +121,7 @@ val uri: Uri = Uri.parse("content://user_dictionary/words")
 
 这一小节介绍如何从内容提供器中获取数据，将使用用户字典提供器作为例子。
 
-> 为了方便介绍，一下代码运行在 UI 线程中。在实际使用中，请不要使用 UI 线程执行这些操作。
+> 为了方便介绍，以下代码运行在 UI 线程中。在实际使用中，请不要使用 UI 线程执行这些操作。
 
 > CursorLoader 从 Android P（28）开始被弃用了，现在官方推荐使用 ViewModels 和 LiveData。
 
@@ -160,6 +160,7 @@ public final Cursor query( Uri uri,
 | 参数          | 类型     | 含义                                                         |
 | ------------- | -------- | ------------------------------------------------------------ |
 | uri           | Uri      | 这项必填，Uri 的解释可以看 概述的第三小节                    |
+| projection    | String[] | 相当于SQL中要查询的列名（填入`null`代表查询所有列）          |
 | selection     | String   | 选择条件，相当于 SQL 中的 Where（填入 `null` 代表无条件）    |
 | selectionArgs | String[] | 如果选择条件中的参数用 `?` 代替，则参数写在这里（填入 `null` 代表无参数） |
 | sortOrder     | String   | 排序条件（填入 `null` 代表无）                               |

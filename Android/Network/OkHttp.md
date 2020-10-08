@@ -39,7 +39,7 @@ val request = Request.Builder()
 				.url(url)         // url
 				.get()          // 请求方法 GET
 			//	.post(requestBody)   // 请求方法 POST
-             .build()          // 构建
+             	.build()          // 构建
 ```
 
 ### 2.请求头

@@ -1,7 +1,5 @@
 # Storage overview
 
-
-
 ## 几种存储类型的比较
 
 |                                 | 类型                                                         | Access method                                                | 权限                                                         | Can other apps access? | Files removed on app uninstalled? |

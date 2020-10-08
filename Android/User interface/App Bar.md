@@ -37,8 +37,6 @@
    setSupportActionBar(findViewById(R.id.my_toolbar))
    ```
 
-
-
 ## 标题居中
 
 默认的标题在左侧，那个不可更改，要让标题居中
@@ -70,8 +68,6 @@
    ```kotlin
    supportActionBar?.setDisplayShowTitleEnabled(false)
    ```
-
-
 
 ## Action Button
 
@@ -123,9 +119,6 @@
    }
    ```
 
-   
-
-
 
 ## Navigation icon
 
@@ -139,8 +132,6 @@ toolbar.setNavigationOnClickListener{
 ```
 
 > 注意：以上方法是 Toolbar 的，不是 ActionBar 的
-
-
 
 ## Up Action
 
@@ -162,8 +153,6 @@ supportActionBar?.setHomeAsUpIndicator(R.drawable.xxx)
 `Navigation Icon`的点击事件看起来容易设置一些。
 
 > 可以在 manifest 文件中声明要返回的 Activity 是哪一个，但我觉得这么做很蠢，有兴趣自己去看文档
-
-
 
 ## Action View
 
