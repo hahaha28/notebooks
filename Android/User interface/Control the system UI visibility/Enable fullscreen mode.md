@@ -1,4 +1,4 @@
-# Enable fullscreen mode
+# qEnable fullscreen mode
 
 > 笔记整理自[官方文档](https://developer.android.com/training/system-ui/immersive)
 >
