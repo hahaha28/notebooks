@@ -4,8 +4,6 @@
 >
 > 2020/2/9
 
-
-
 ## 注意事项
 
 * 隐藏状态栏后，再次滑下状态栏，状态栏就会再次出现。
@@ -51,7 +49,7 @@ supportActionBar?.hide()
 
 ```kotlin
 View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN	// 这个flag能让内容显示在状态栏之后
-view.SYSTEM_UI_FLAG_STABLE	//这个flag据说能让app的布局保持稳定
+View.SYSTEM_UI_FLAG_LAYOUT_STABLE	//这个flag据说能让app的布局保持稳定
 ```
 
 **注意事项：**
